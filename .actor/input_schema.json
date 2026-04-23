@@ -1,0 +1,72 @@
+{
+  "actorSpecification": 1,
+  "title": "Eventbrite Events Scraper Pro Input",
+  "description": "Search Eventbrite for events using keyword, location, date range, category, and price filters.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "query": {
+      "title": "Search keyword",
+      "type": "string",
+      "description": "Keywords to search for on Eventbrite (e.g. 'AI conference', 'startup networking')",
+      "editor": "textfield"
+    },
+    "city": {
+      "title": "City",
+      "type": "string",
+      "description": "City to search in (e.g. 'San Francisco', 'New York', 'London')",
+      "editor": "textfield"
+    },
+    "country": {
+      "title": "Country code",
+      "type": "string",
+      "description": "Two-letter country code (e.g. 'us', 'gb', 'de'). Defaults to 'us'.",
+      "editor": "textfield",
+      "default": "us"
+    },
+    "dateFrom": {
+      "title": "Start date",
+      "type": "string",
+      "description": "Filter events starting from this date (YYYY-MM-DD)",
+      "editor": "datepicker"
+    },
+    "dateTo": {
+      "title": "End date",
+      "type": "string",
+      "description": "Filter events up to this date (YYYY-MM-DD)",
+      "editor": "datepicker"
+    },
+    "category": {
+      "title": "Category",
+      "type": "string",
+      "description": "Eventbrite category slug (e.g. 'technology', 'business', 'music', 'food-and-drink', 'arts', 'science-and-tech')",
+      "editor": "textfield"
+    },
+    "priceType": {
+      "title": "Price filter",
+      "type": "string",
+      "enum": ["free", "paid", "both"],
+      "description": "Filter by ticket price",
+      "default": "both",
+      "editor": "select"
+    },
+    "maxPages": {
+      "title": "Max pages",
+      "type": "integer",
+      "description": "Number of search result pages to scrape (each page has ~20 events). Default: 5.",
+      "default": 5,
+      "minimum": 1,
+      "maximum": 20,
+      "editor": "number"
+    },
+    "maxResults": {
+      "title": "Max results",
+      "type": "integer",
+      "description": "Maximum total events to return. Default: 100.",
+      "default": 100,
+      "minimum": 1,
+      "maximum": 500,
+      "editor": "number"
+    }
+  }
+}

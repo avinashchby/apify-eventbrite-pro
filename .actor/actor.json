@@ -1,0 +1,39 @@
+{
+  "actorSpecification": 1,
+  "name": "eventbrite-events-scraper-pro",
+  "title": "Eventbrite Events Scraper Pro — Search, Filter & Export Events",
+  "description": "Scrape Eventbrite events by keyword, city, date range, category, and price. Get event name, date, location, price, organizer, description, and direct ticket URL. Ideal for event research, lead generation, and market analysis.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": ["SCRAPING", "MARKETING"],
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 3600,
+    "memoryMbytes": 4096
+  },
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Eventbrite Events",
+      "views": {
+        "overview": {
+          "title": "Events",
+          "transformation": { "fields": ["name", "url", "startAt", "location", "category", "isFree", "ticketPrice", "organizer"] },
+          "display": {
+            "component": "table",
+            "properties": {
+              "name": { "label": "Event Name", "format": "text" },
+              "url": { "label": "Ticket URL", "format": "link" },
+              "startAt": { "label": "Date", "format": "datetime" },
+              "location": { "label": "Location", "format": "text" },
+              "category": { "label": "Category", "format": "text" },
+              "isFree": { "label": "Free?", "format": "boolean" },
+              "ticketPrice": { "label": "Price", "format": "text" },
+              "organizer": { "label": "Organizer", "format": "text" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
