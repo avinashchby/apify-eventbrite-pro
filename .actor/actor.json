@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "eventbrite-events-scraper-pro",
-  "title": "Eventbrite Events Scraper Pro — Search, Filter & Export Events",
+  "title": "Eventbrite Events Scraper Pro — Search, Filter & Export",
   "description": "Scrape Eventbrite events by keyword, city, date range, category, and price. Get event name, date, location, price, organizer, description, and direct ticket URL. Ideal for event research, lead generation, and market analysis.",
   "version": "1.0",
   "buildTag": "latest",
