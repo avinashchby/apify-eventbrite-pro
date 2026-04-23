@@ -1,5 +1,4 @@
 {
-  "actorSpecification": 1,
   "title": "Eventbrite Events Scraper Pro Input",
   "description": "Search Eventbrite for events using keyword, location, date range, category, and price filters.",
   "type": "object",
